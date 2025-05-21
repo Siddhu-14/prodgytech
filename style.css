@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    padding-top: 60px; /* To prevent content from being hidden behind the fixed nav */
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Initial background color */
+    color: white;
+    z-index: 100; /* Ensure it stays on top */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Hover background color */
+    color: #ddd; /* Hover text color */
+}
+
+/* Style for when the nav is scrolled (you can adjust these) */
+.fixed-nav.scrolled {
+    background-color: #007bff; /* Scrolled background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.fixed-nav.scrolled nav ul li a {
+    color: white; /* Scrolled text color */
+}
+
+.fixed-nav.scrolled nav ul li a:hover {
+    background-color: #0056b3; /* Scrolled hover background color */
+}
+
+.content {
+    padding: 20px;
+}
